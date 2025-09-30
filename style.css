@@ -1,0 +1,135 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header / Title */
+h1 {
+  text-align: center;
+  color: #6200ea;
+  margin-bottom: 30px;
+   
+  padding:  16px;
+  border-style: solid;
+  border-color: #1d33c5;
+  border-radius: 20px;
+  font-size: 40px;
+}
+
+/* Form Section */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Add Task Button */
+.add-btn {
+  background-color: gray;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #3700b3;
+  transform: scale(1.05);
+}
+
+.add-btn:active {
+  transform: scale(0.97);
+  background-color: #4a00b4;
+}
+
+/* Task List Section */
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+}
+
+#tasks {
+  list-style-type: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#tasks li {
+  background-color: #ffffff;
+  border-left: 5px solid #6200ea;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Task Buttons */
+#tasks button {
+  background-color: blanchedalmond;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#tasks button:hover {
+  background-color: #ff0000;
+}
+
+/* Progress Section */
+#progress-bar {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #03dac6;
+  transition: width 0.5s ease;
+}
+
+/* Completed Task Style */
+#tasks li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
